@@ -1,0 +1,37 @@
+/* src/components/footer/footer.css */
+.fotterlinks {
+  background-color: #555;
+  color: white;
+  padding: 15px 0;
+  padding-left: 3%;
+  text-align: left;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  border-top: 4px solid black;
+   mask-image: linear-gradient(to left, transparent, black 65%);
+  -webkit-mask-image: linear-gradient(to left, transparent, black 65%);
+  display: flex;
+  gap: 10%;
+
+}
+ul{
+    list-style-type: none;
+}
+
+a{
+    color:aliceblue;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #c3bfbf;
+}
+.footerlogo{
+    position:absolute;
+    right: 5%;
+    bottom: 1%;
+    width: 100px;
+    z-index: 2;
+}
