@@ -1,0 +1,128 @@
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background */
+.banner-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to left, transparent, black 65%);
+  -webkit-mask-image: linear-gradient(to left, transparent, black 65%);
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  gap: 12px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.institute-name {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Auth Box */
+.auth-section {
+  position: absolute;
+  top: 49%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 350px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.auth-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.auth-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-section input {
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.auth-section button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #737272;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-section button:hover {
+  background-color: #555;
+}
+
+/* Enroll button below login */
+
+.not-registered{
+    margin-top:5px;
+    color: #555;
+}
+
+.enroll-btn {
+  margin-top: 15px;
+  width:100%;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #555;
+  margin: 10px 0 0 0; /* top 5px, bottom 10px */
+  width: 100%;
+}
+
+
+.enroll-btn:hover {
+  background-color: #218838;
+}
+
+/* .auth-section .already {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+} */
+
+.auth-section span {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.message {
+  color: #555;
+}

@@ -1,0 +1,48 @@
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .dashboard-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 5vw;
+  gap: 32px;
+} */
+
+
+
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.gallery-section {
+  flex: 1.6;
+}
+
+.details-section {
+  flex: 1;
+}
+
+
+.profile-icon {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 1000;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
