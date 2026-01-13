@@ -7,7 +7,7 @@ import BookGallery from '../../components/BookGallery/BookGallery';
 import BookDetails from '../../components/BookDetail/BookDetail';
 import hero_banner from '../../assets/backgnd.jpg';
 import profileIcon from '../../assets/spiderman-icon.jpg' // <-- Make sure this exists
-import './Dashboard.css';
+import './DashBoard.css';
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const defaultBooks = [
