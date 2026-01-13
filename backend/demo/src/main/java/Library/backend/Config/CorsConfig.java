@@ -5,7 +5,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import java.util.Arrays;
+
+import java.util.List;
 
 @Configuration
 public class CorsConfig {
@@ -14,14 +15,21 @@ public class CorsConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(Arrays.asList("http://localhost:5173","http://localhost:5174","http://localhost:5175"));
-        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        config.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
-        config.setAllowCredentials(true); // Important for JWT with cookies
+        // ✅ Allow frontend from anywhere (needed for Vercel)
+        config.setAllowedOriginPatterns(List.of("*"));
 
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        config.setAllowedMethods(List.of(
+                "GET", "POST", "PUT", "DELETE", "OPTIONS"
+        ));
+
+        config.setAllowedHeaders(List.of("*"));
+
+        config.setAllowCredentials(true);
+
+        UrlBasedCorsConfigurationSource source =
+                new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
 
-        return source; // ✅ this works because it's a subclass of CorsConfigurationSource
+        return source;
     }
 }
