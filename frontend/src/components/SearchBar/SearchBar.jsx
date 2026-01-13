@@ -9,7 +9,7 @@ const SearchBar = ({ setBooks }) => {
     e.preventDefault();
     if (!query.trim()) return;
     try {
-      const response = await axios.get(`http://localhost:8085/public/similar/${encodeURIComponent(query)}`);
+      const response = await axios.get(`https://library-management-system-production-c592.up.railway.app/public/similar/${encodeURIComponent(query)}`);
       setBooks(response.data); // expects an array of book objects
     } catch (error) {
       setBooks([]);

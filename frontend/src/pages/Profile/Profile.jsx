@@ -19,7 +19,7 @@ const Profile = () => {
 
     // Fetch profile
     axios
-      .get('http://localhost:8080/user/profile', {
+      .get('https://library-management-system-production-c592.up.railway.app/user/profile', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setProfile(res.data))
@@ -32,7 +32,7 @@ const Profile = () => {
 
     // Fetch issued books
     axios
-      .get('http://localhost:8080/user/issued-books', {
+      .get('https://library-management-system-production-c592.up.railway.app/user/issued-books', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setIssuedBooks(res.data))

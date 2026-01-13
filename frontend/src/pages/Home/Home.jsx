@@ -22,7 +22,7 @@ const Home = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8080/user/signin',
+        'https://library-management-system-production-c592.up.railway.app/user/signin',
         {},
         {
           headers: {
@@ -60,7 +60,7 @@ const Home = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8080/public/signup', {
+      const response = await axios.post('https://library-management-system-production-c592.up.railway.app/public/signup', {
         username,
         email,
         studentId,

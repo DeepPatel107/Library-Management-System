@@ -5,6 +5,8 @@ import Footer from '../../components/Footer/Footer';
 import profileIcon from '../../assets/spiderman-icon.jpg';
 import { useNavigate } from 'react-router-dom';
 import './Admin.css';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
 const actions = {
   "Issue Book": ["Student ID", "Book Title"],
@@ -123,7 +125,7 @@ const Admin = () => {
 
       const config = {
         method,
-        url: `http://localhost:8080${url}`,
+        url: `${BASE_URL}${url}`,
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
